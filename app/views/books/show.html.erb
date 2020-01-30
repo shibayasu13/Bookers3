@@ -38,7 +38,7 @@
 					<tr>
 						<h4>Book detail</h4>
 						<td><%= link_to user_path(current_user.id) do %>
-								<%= attachment_image_tag @user, :profile_image,:fill, 60, 60, format: 'jpeg',class: "img-circle pull-left profile-img",  fallback:"no_image.jpg" %><br>
+								<%= attachment_image_tag @user, :profile_image,:fill, 60, 60, format: 'jpeg',class: "img-circle pull-left profile-img",  fallback:"no_image.jpg" %>
 								<%=  current_user.name %>
 							<% end %>
 						</td>
