@@ -1,0 +1,16 @@
+
+<div class="container">
+	<div class= "row" >
+		<div class="col-md-offset-3 col-md-6">
+			<ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
+				<p><%= flash[:info] %></p>
+
+			<h1>Welcom to<span class="glyphicon glyphicon-book"></span><<strong>Bookers!</strong></h1>
+				<p>In<span class="glyphicon glyphicon-book"></span><<strong>Bookers!</strong></p>
+				<p>you can share and exchange your opinions , inpressions , and emotions about various books!</p>
+		 		<%= link_to "Log in", user_session_path %>
+				<%= link_to "Sign Up", new_user_registration_path %>
+			</ul>
+		</div>
+	</div>
+</div>

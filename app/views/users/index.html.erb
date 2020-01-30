@@ -1,0 +1,38 @@
+<div class="container">
+	<div class= "row" >
+		<h2>Books</h2>
+		<div class="col-xs-3">
+			<div>
+				<%= render 'users/list', user: @user %>
+			</div>
+			<div>
+				<%= render 'books/list', book: @book %>
+			</div>
+		</div>
+		<div class="col-xs-9">
+			<table class="table table-striped">
+					<tr>
+						<h3>Users</h3>
+						<th>image</th>
+						<th>name</th>
+						<th></th>
+					</tr>
+					<% @users.each do |user| %>
+					<% if flash[:info] %>
+						<p><%= flash[:info] %></p>
+					<% else flash[:notice] %>
+						<p><%= flash[:notice] %></p>
+					<% end %>
+					<tr>
+						<td><%= link_to 'users_path' do %>
+							<%= attachment_image_tag user, :profile_image, fallback:"no_image.jpg" %>
+							<% end %>
+							</td>
+						<td><%= user.name %></td>
+						<td><%= link_to "Show", user_path(user.id)%></td>
+					</tr>
+					<% end %>
+			</table>
+		</div>
+	</div>
+</div>
