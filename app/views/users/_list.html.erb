@@ -7,8 +7,20 @@
 		<p><%= flash[:notice] %></p>
 	<% end %>
 	<%= attachment_image_tag user, :profile_image,:fill, 60, 60, format: 'jpeg',class: "img-circle pull-left profile-img", fallback:"no_image.jpg" %>
-	<h3>name</h3><p><%= user.name %></p>
-	<h3>introduction</h3><p><%= user.introduction %></p>
+	<table>
+		<table class="table table-striped　style">
+				<colgroup span="2"></colgroup>
+			<tr>
+				<th>name</th>
+				<td><%= user.name %></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>introduction</th>
+				<td><%= user.introduction %></td>
+			</tr>
+		</tbody>
+	</table>
 	<% if user.id == current_user.id %>
-	<%= link_to " ", edit_user_path(user.id), class: 'col-xs-12 btn btn-default glyphicon glyphicon-wrench' %>
 	<% end %>
